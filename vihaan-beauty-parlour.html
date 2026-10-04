@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vihaan Beauty Parlour — Hair, Skin, Bridal & Beauty Services</title>
+<meta name="description" content="Vihaan Beauty Parlour: haircuts, facials, bridal makeup, nails, waxing and spa. Book your appointment online in under a minute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b1d22;--bg:#fffaf7;--cream:#fdf0ea;--rose:#b83264;--rose2:#d9577f;--gold:#b98a3e;--muted:#7d6b70;--line:#f0dfd8;--card:#fff;--ok:#2e7d4f;--shadow:0 14px 36px rgba(184,50,100,.13)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:0}
+.wrap{max-width:1180px;margin:auto;padding:0 18px}
+.topbar{background:var(--ink);color:#f7e6dd;font-size:13px;text-align:center;padding:8px 10px}
+.topbar b{color:#f0c57a}
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,247,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:70px}
+.logo{font-family:'Cormorant Garamond';font-size:27px;font-weight:700;color:var(--rose);line-height:1}
+.logo small{display:block;font-family:Jost;font-size:9.5px;letter-spacing:4px;color:var(--gold);font-weight:500;text-transform:uppercase;margin-top:3px}
+nav{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:500}
+nav a:hover{color:var(--rose)}
+.btn{display:inline-block;padding:13px 28px;border-radius:40px;font-weight:500;font-size:14px;transition:.25s;letter-spacing:.3px}
+.btn.p{background:linear-gradient(135deg,var(--rose),var(--rose2));color:#fff;box-shadow:var(--shadow)}
+.btn.p:hover{transform:translateY(-2px)}
+.btn.o{border:1.5px solid var(--rose);color:var(--rose);background:transparent}
+.btn.o:hover{background:var(--rose);color:#fff}
+.btn.wa{background:#25d366;color:#fff}
+.btn.sm{padding:9px 20px;font-size:13px}
+.burger{display:none;background:#fff;border:1px solid var(--line);width:42px;height:42px;border-radius:50%;font-size:18px;margin-left:auto}
+.hero{background:radial-gradient(circle at 85% 15%,#ffd9e6,transparent 50%),radial-gradient(circle at 5% 90%,#ffe9c9,transparent 45%),var(--cream);padding:72px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.tag{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--rose);padding:6px 16px;border-radius:30px;font-size:13px;font-weight:500}
+.hero h1{font-size:clamp(42px,6.2vw,80px);line-height:1;margin:18px 0}
+.hero h1 em{color:var(--rose)}
+.hero p{color:var(--muted);max-width:480px;font-size:17px}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.hs{display:flex;gap:36px;margin-top:38px}
+.hs b{font-family:'Cormorant Garamond';font-size:36px;color:var(--rose);display:block;line-height:1}
+.hs span{font-size:12.5px;color:var(--muted)}
+.hv{position:relative;height:430px}
+.bub{position:absolute;border-radius:50%;display:grid;place-items:center;box-shadow:var(--shadow);animation:fl 6s ease-in-out infinite}
+.bub:nth-child(1){width:250px;height:250px;font-size:112px;left:20px;top:30px;background:linear-gradient(145deg,#ffc1d6,#fff)}
+.bub:nth-child(2){width:170px;height:170px;font-size:76px;right:10px;top:0;background:linear-gradient(145deg,#ffe3b0,#fff);animation-delay:1s}
+.bub:nth-child(3){width:190px;height:190px;font-size:84px;right:30px;bottom:0;background:linear-gradient(145deg,#e8d0f5,#fff);animation-delay:2s}
+.bub:nth-child(4){width:120px;height:120px;font-size:52px;left:0;bottom:20px;background:#fff;animation-delay:1.5s}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.strip{background:#fff;border-block:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:20px 18px}
+.strip div{display:flex;gap:12px;align-items:center;font-size:13px}
+.strip i{font-style:normal;font-size:27px}
+.strip b{display:block;font-size:14.5px}
+section{padding:68px 0}
+.sh{text-align:center;margin-bottom:36px}
+.sh h2{font-size:clamp(32px,4.4vw,48px)}
+.sh p{color:var(--muted)}
+.sh:after{content:"";display:block;width:70px;height:2px;background:linear-gradient(90deg,var(--rose),var(--gold));margin:14px auto 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.tab{padding:10px 20px;border-radius:30px;background:#fff;border:1px solid var(--line);font-size:14px;font-weight:500;transition:.2s}
+.tab.on,.tab:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.sv{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:center;transition:.25s}
+.sv:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.sv.on{border-color:var(--rose);background:#fff6f9}
+.sv .ic{font-size:30px;width:54px;height:54px;border-radius:14px;background:var(--cream);display:grid;place-items:center;flex:none}
+.sv h3{font-family:Jost;font-weight:600;font-size:16px}
+.sv p{font-size:12.5px;color:var(--muted)}
+.sv .pr{margin-left:auto;text-align:right;flex:none}
+.sv .pr b{font-size:18px;color:var(--rose);display:block}
+.sv .pr button{margin-top:4px;background:var(--ink);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500}
+.sv.on .pr button{background:var(--ok)}
+.pk{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.pkc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px 26px;position:relative;transition:.25s}
+.pkc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pkc.pop{border:2px solid var(--rose)}
+.pkc .rb{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--rose);color:#fff;font-size:12px;font-weight:500;padding:4px 16px;border-radius:20px}
+.pkc h3{font-size:28px}
+.pkc .am{font-family:'Cormorant Garamond';font-size:42px;color:var(--rose);font-weight:700;line-height:1.1;margin:6px 0}
+.pkc .am s{font-size:18px;color:var(--muted);font-weight:500;margin-left:6px}
+.pkc ul{list-style:none;margin:14px 0 20px;font-size:14px}
+.pkc li{padding:5px 0;border-bottom:1px dashed var(--line)}
+.pkc li:before{content:"✓ ";color:var(--ok);font-weight:600}
+.pkc .btn{width:100%;text-align:center}
+.offer{background:linear-gradient(135deg,#4b1530,var(--rose));color:#fff;border-radius:30px;padding:46px;display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:center}
+.offer h2{font-size:clamp(32px,4vw,48px);line-height:1.05}
+.offer h2 em{color:#f6cf8a}
+.code{display:inline-block;border:2px dashed #f6cf8a;color:#f6cf8a;padding:7px 16px;border-radius:10px;font-weight:600;letter-spacing:2px;margin:12px 8px 0 0}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.gi{aspect-ratio:1;border-radius:22px;display:grid;place-items:center;font-size:70px;position:relative;overflow:hidden;transition:.3s}
+.gi:hover{transform:scale(1.03)}
+.gi span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,#0007);color:#fff;font-size:13px;padding:22px 14px 10px;font-weight:500}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.tm{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;text-align:center}
+.tm .av{width:100px;height:100px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-size:46px}
+.tm h3{font-size:24px}
+.tm p{font-size:13.5px;color:var(--muted)}
+.tm .rt{color:#f0a52a;font-size:13px}
+.why,.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.why div,.rev div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px}
+.why i{font-style:normal;font-size:34px}
+.why h3{font-family:Jost;font-size:17px;font-weight:600;margin:8px 0 4px}
+.why p,.rev p{font-size:14px;color:var(--muted)}
+.rev p{margin:8px 0;font-size:14.5px}
+.rev .st{color:#f0a52a}
+.rev b{font-size:14px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 22px;margin-bottom:10px}
+.faq summary{font-weight:500;cursor:pointer}
+.faq p{margin-top:8px;color:var(--muted);font-size:14.5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+.box h3{font-size:28px;margin-bottom:12px}
+.box p{font-size:14.5px;margin-bottom:8px}
+.hrs{width:100%;font-size:14px;border-collapse:collapse}
+.hrs td{padding:6px 0;border-bottom:1px dashed var(--line)}
+.hrs td:last-child{text-align:right;font-weight:500}
+input,textarea,select{width:100%;padding:12px 15px;margin-bottom:11px;border:1px solid var(--line);border-radius:14px;font-family:inherit;font-size:14px;outline:none;background:#fff;color:var(--ink)}
+input:focus,textarea:focus,select:focus{border-color:var(--rose)}
+.map{margin-top:12px;border:0;border-radius:16px;width:100%;height:210px}
+.nl{background:linear-gradient(135deg,#ffe3ec,#fdeed6);border-radius:30px;padding:42px;text-align:center}
+.nl h2{font-size:36px}
+.nl form{display:flex;gap:10px;max-width:500px;margin:18px auto 0}
+.nl input{margin:0;border:0}
+.nl button{background:var(--ink);color:#fff;padding:0 26px;border-radius:30px;font-weight:500}
+footer{background:var(--ink);color:#e9d9d0;padding:46px 0 100px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;margin-bottom:10px;font-weight:500}
+footer a{display:block;margin-bottom:6px;opacity:.8}
+footer a:hover{opacity:1;color:#f0c57a}
+.copy{text-align:center;margin-top:28px;opacity:.55;font-size:12px}
+.ov{position:fixed;inset:0;background:#0007;z-index:90;opacity:0;pointer-events:none;transition:.3s}
+.ov.on{opacity:1;pointer-events:all}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:100;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.dh h3{font-size:26px}
+.x{background:var(--cream);width:34px;height:34px;border-radius:50%;font-size:15px}
+.db{flex:1;overflow:auto;padding:12px 22px}
+.ci{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ci .t{width:44px;height:44px;border-radius:12px;background:var(--cream);display:grid;place-items:center;font-size:24px}
+.ci h4{font-size:14px;font-weight:500}
+.ci small{color:var(--muted)}
+.rm{background:none;color:#c0392b;font-size:12px}
+.df{padding:16px 22px;border-top:1px solid var(--line);background:#fffcfa}
+.row{display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px}
+.row.tot{font-weight:600;font-size:18px;color:var(--rose);margin-top:6px}
+.cpn{display:flex;gap:8px;margin-bottom:10px}
+.cpn input{margin:0;border-radius:30px}
+.cpn button{background:var(--ink);color:#fff;padding:0 18px;border-radius:30px;font-size:13px}
+.df .btn{width:100%;text-align:center;margin-top:8px}
+.empty{text-align:center;color:var(--muted);padding:40px}
+.modal{position:fixed;inset:0;z-index:110;display:none;place-items:center;padding:14px;background:#0008}
+.modal.on{display:grid}
+.mc{background:#fff;border-radius:26px;max-width:720px;width:100%;max-height:94vh;overflow:auto;padding:30px;position:relative}
+.mc .x{position:absolute;top:16px;right:16px}
+.mc h2{font-size:34px;margin-bottom:4px}
+.steps{display:flex;gap:6px;margin:14px 0 20px}
+.steps i{flex:1;height:5px;border-radius:5px;background:var(--line)}
+.steps i.d{background:var(--rose)}
+.days{display:flex;gap:8px;overflow:auto;padding-bottom:8px;margin-bottom:14px}
+.day{flex:none;width:66px;padding:10px 0;border-radius:16px;border:1px solid var(--line);background:#fff;text-align:center;font-size:12px;color:var(--muted)}
+.day b{display:block;font-size:20px;color:var(--ink)}
+.day.on{background:var(--rose);color:#fff;border-color:var(--rose)}
+.day.on b{color:#fff}
+.day.off{opacity:.35;pointer-events:none}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(98px,1fr));gap:8px;margin-bottom:14px}
+.slot{padding:10px 0;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:500}
+.slot.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.slot:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.lbl{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:12px 0 7px;font-weight:500}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chip{padding:9px 16px;border-radius:30px;border:1px solid var(--line);background:#fff;font-size:13.5px}
+.chip.on{background:var(--rose);color:#fff;border-color:var(--rose)}
+.sum{background:var(--cream);border-radius:18px;padding:16px 18px;margin:12px 0;font-size:14px}
+.sum .row{margin-bottom:3px}
+.err{color:#c0392b;font-size:13px;margin:4px 0 8px;display:none}
+.mf{display:flex;gap:10px;margin-top:14px}
+.mf .btn{flex:1;text-align:center}
+.ok{text-align:center}
+.ok .tick{font-size:68px}
+.bk{background:var(--cream);border-radius:16px;padding:14px 16px;margin-top:14px;font-size:14px;text-align:left}
+.toast{position:fixed;left:50%;bottom:94px;transform:translate(-50%,40px);background:var(--ink);color:#fff;padding:11px 22px;border-radius:30px;font-size:14px;z-index:200;opacity:0;transition:.3s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.float{position:fixed;right:16px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.float a,.float button{box-shadow:0 8px 20px #0003}
+.float .w{background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:26px}
+.float .bkb{background:var(--rose);color:#fff;border-radius:40px;padding:14px 22px;font-weight:500;font-size:14px;position:relative}
+.float .bkb b{position:absolute;top:-6px;right:-4px;background:var(--ink);font-size:11px;min-width:20px;height:20px;border-radius:10px;display:grid;place-items:center}
+.float .u{background:var(--ink);color:#fff;width:44px;height:44px;border-radius:50%;display:none;font-size:18px}
+@media(max-width:900px){
+ nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 22px;border-bottom:1px solid var(--line);margin:0}
+ nav.on{display:flex}
+ .burger{display:grid}
+ .nav>.btn{display:none}
+ .hero .wrap,.offer,.two,footer .wrap{grid-template-columns:1fr}
+ .hv{height:310px}
+ .bub:nth-child(1){width:180px;height:180px;font-size:80px}
+ .bub:nth-child(2){width:120px;height:120px;font-size:54px}
+ .bub:nth-child(3){width:130px;height:130px;font-size:58px}
+ .bub:nth-child(4){display:none}
+ .strip .wrap{grid-template-columns:1fr 1fr}
+ .nl form{flex-direction:column}
+ .nl button{padding:13px}
+ .svc{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">✨ Festive Offer: <b>15% OFF</b> on your first visit — use code <b>GLOW15</b> while booking</div>
+
+<header>
+ <div class="wrap nav">
+  <a href="#home" class="logo">Vihaan<small>Beauty Parlour</small></a>
+  <nav id="nav">
+   <a href="#home">Home</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+   <a href="#" onclick="openManage();return false">My Booking</a>
+  </nav>
+  <a href="#" class="btn p sm" onclick="openBook();return false">Book Appointment</a>
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('on')" aria-label="Menu">☰</button>
+ </div>
+</header>
+
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <span class="tag">💖 Your Beauty, Our Passion</span>
+   <h1>Glow with <em>confidence</em> every day</h1>
+   <p>From hair and skin to bridal makeup, nails and spa — expert stylists, hygienic tools and premium products. Book your slot online in under a minute.</p>
+   <div class="cta">
+    <a href="#" class="btn p" onclick="openBook();return false">Book Appointment</a>
+    <a href="#services" class="btn o">View Services &amp; Prices</a>
+    <a id="waHero" target="_blank" href="#" class="btn wa">Chat on WhatsApp</a>
+   </div>
+   <div class="hs"><div><b>5000+</b><span>Happy Clients</span></div><div><b>8+</b><span>Years Experience</span></div><div><b>4.9★</b><span>Average Rating</span></div></div>
+  </div>
+  <div class="hv"><div class="bub">💇‍♀️</div><div class="bub">💄</div><div class="bub">💅</div><div class="bub">🌸</div></div>
+ </div>
+</section>
+
+<div class="strip"><div class="wrap">
+ <div><i>🧼</i><span><b>Hygienic &amp; Safe</b>Sterilised tools, fresh kits</span></div>
+ <div><i>🌿</i><span><b>Premium Products</b>Trusted professional brands</span></div>
+ <div><i>👩‍🎨</i><span><b>Expert Stylists</b>Trained &amp; experienced</span></div>
+ <div><i>🏠</i><span><b>Home Service</b>Available on request</span></div>
+</div></div>
+
+<section id="services">
+ <div class="wrap">
+  <div class="sh"><h2>Our Services &amp; Price List</h2><p>Tap “Add” to build your appointment — book several services at once</p></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="svc" id="svc"></div>
+ </div>
+</section>
+
+<section id="packages" style="padding-top:0">
+ <div class="wrap">
+  <div class="sh"><h2>Packages &amp; Memberships</h2><p>Better value for your special days</p></div>
+  <div class="pk" id="pk"></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="offer">
+   <div>
+    <span class="tag" style="color:var(--rose)">Limited Time Offers</span>
+    <h2>Pamper days<br><em>up to 25% OFF</em></h2>
+    <p style="margin-top:8px;opacity:.85">Apply a code at the last step of booking.</p>
+    <span class="code">GLOW15</span><span class="code">BRIDE20</span><span class="code">SQUAD10</span>
+    <p style="font-size:13px;opacity:.75;margin-top:12px">GLOW15: 15% off (first visit, ₹500+) · BRIDE20: 20% off (₹5000+) · SQUAD10: ₹100 off when booking 3+ services</p>
+   </div>
+   <div style="font-size:130px;text-align:center">🎁</div>
+  </div>
+ </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+ <div class="wrap">
+  <div class="sh"><h2>Our Work</h2><p>Sample gallery — replace with your real photos</p></div>
+  <div class="gal" id="gal"></div>
+ </div>
+</section>
+
+<section id="team" style="padding-top:0">
+ <div class="wrap">
+  <div class="sh"><h2>Meet Our Experts</h2></div>
+  <div class="team" id="team-g"></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="sh"><h2>Why Choose Us</h2></div>
+  <div class="why">
+   <div><i>✨</i><h3>Personal Consultation</h3><p>We understand your skin, hair and style before we begin.</p></div>
+   <div><i>🧴</i><h3>Quality Products</h3><p>Only trusted professional products that are gentle and effective.</p></div>
+   <div><i>⏰</i><h3>On-Time Appointments</h3><p>Pick a slot online and skip the waiting.</p></div>
+   <div><i>💰</i><h3>Transparent Pricing</h3><p>Clear price list with no hidden charges.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+ <div class="wrap">
+  <div class="sh"><h2>Client Love</h2><p>Sample reviews (demo)</p></div>
+  <div class="rev">
+   <div><span class="st">★★★★★</span><p>Best bridal makeup experience! The look lasted all day and photos came out stunning.</p><b>— Neha S., Bride</b></div>
+   <div><span class="st">★★★★★</span><p>Super clean parlour and very friendly staff. My hair spa results were amazing.</p><b>— Pooja K.</b></div>
+   <div><span class="st">★★★★★</span><p>Online booking was so easy and they were right on time. Loved the facial!</p><b>— Riya M.</b></div>
+  </div>
+ </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+ <div class="wrap faq" style="max-width:820px">
+  <div class="sh"><h2>FAQ</h2></div>
+  <details><summary>How do I book an appointment?</summary><p>Tap “Book Appointment”, choose your services, pick a date and time, enter your details and confirm. You will get a booking ID and a WhatsApp confirmation.</p></details>
+  <details><summary>Can I cancel or reschedule?</summary><p>Yes. Open “My Booking”, enter your booking ID and cancel. Please let us know at least 3 hours before your slot.</p></details>
+  <details><summary>Do you offer home service?</summary><p>Yes, home service is available for selected services (extra travel charge applies). Choose “Home Service” while booking.</p></details>
+  <details><summary>Do I need to pay in advance?</summary><p>No advance is needed for regular services. Bridal bookings may need a small token amount to block the date.</p></details>
+  <details><summary>Which payment methods do you accept?</summary><p>Cash, UPI and cards at the parlour.</p></details>
+  <details><summary>Do you do bridal trials?</summary><p>Yes, a trial session is included in our bridal packages.</p></details>
+ </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+ <div class="wrap">
+  <div class="sh"><h2>Visit Us</h2></div>
+  <div class="two">
+   <div class="box">
+    <h3>Opening Hours</h3>
+    <table class="hrs">
+     <tr><td>Monday – Friday</td><td>10:00 AM – 8:00 PM</td></tr>
+     <tr><td>Saturday</td><td>10:00 AM – 9:00 PM</td></tr>
+     <tr><td>Sunday</td><td>11:00 AM – 7:00 PM</td></tr>
+    </table>
+    <p style="margin-top:14px">📍 Address: (add parlour address here)</p>
+    <p>📲 WhatsApp: <span id="phoneTxt"></span></p>
+    <p>📷 Instagram: <a href="https://www.instagram.com/vihaan47186" target="_blank" style="color:var(--rose);font-weight:500">@vihaan47186</a></p>
+    <iframe class="map" loading="lazy" title="Map" src="https://www.google.com/maps?q=beauty+parlour&output=embed"></iframe>
+   </div>
+   <div class="box">
+    <h3>Send an Enquiry</h3>
+    <form id="enq"><input id="en" placeholder="Your name" required><input id="ep" type="tel" placeholder="Phone number" required><textarea id="em" rows="4" placeholder="How can we help?" required></textarea><button class="btn p" style="width:100%">Send on WhatsApp</button></form>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap"><div class="nl"><h2>Get 10% OFF Your Next Visit 🌸</h2><p>Join our list for beauty tips, new offers and festive deals.</p>
+  <form id="nlf"><input type="email" placeholder="Your email address" required><button>Subscribe</button></form></div></div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div><h4 class="logo" style="color:#fff">Vihaan<small>Beauty Parlour</small></h4><p style="margin-top:10px">Hair, skin, bridal and beauty services you can trust.</p></div>
+  <div><h4>Explore</h4><a href="#services">Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#team">Team</a></div>
+  <div><h4>Help</h4><a href="#faq">FAQ</a><a href="#" onclick="openManage();return false">My Booking</a><a href="#contact">Contact</a></div>
+  <div><h4>Follow</h4><a href="https://www.instagram.com/vihaan47186" target="_blank">Instagram</a><a id="waFoot" target="_blank" href="#">WhatsApp</a></div>
+ </div>
+ <div class="copy">© 2026 Vihaan Beauty Parlour. All rights reserved. · Demo website</div>
+</footer>
+
+<div class="float">
+ <button class="u" id="up" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+ <a class="w" id="waFloat" target="_blank" href="#" aria-label="WhatsApp">💬</a>
+ <button class="bkb" onclick="openBook()">📅 Book Now<b id="bc">0</b></button>
+</div>
+
+<div class="ov" id="ov" onclick="closeModal()"></div>
+<div class="modal" id="m" onclick="if(event.target===this)closeModal()"><div class="mc" id="mc"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== CONFIG: edit parlour details here ===== */
+const SHOP={name:'Vihaan Beauty Parlour',whatsapp:'91XXXXXXXXXX',open:10,close:20,slotMin:60,homeFee:300,days:14};
+const COUPONS={GLOW15:{t:'pct',v:15,min:500},BRIDE20:{t:'pct',v:20,min:5000},SQUAD10:{t:'flat',v:100,min:0,minItems:3}};
+const CATS=[{id:'hair',n:'Hair',i:'💇‍♀️'},{id:'skin',n:'Skin & Facial',i:'🧖‍♀️'},{id:'makeup',n:'Makeup',i:'💄'},{id:'nails',n:'Nails',i:'💅'},{id:'wax',n:'Waxing & Threading',i:'🌿'},{id:'spa',n:'Spa & Massage',i:'💆‍♀️'}];
+/* [id,name,cat,price,minutes,description,emoji] — sample data, replace with real services */
+const S=[
+ [1,'Haircut & Styling','hair',400,45,'Trim or new look with blow-dry','✂️'],
+ [2,'Hair Spa','hair',900,60,'Deep nourishing treatment for smooth hair','🧴'],
+ [3,'Global Hair Colour','hair',2200,120,'Full colour with professional products','🎨'],
+ [4,'Highlights (per section)','hair',700,60,'Dimension and shine','✨'],
+ [5,'Keratin / Smoothening','hair',3800,150,'Frizz-free, silky finish','💫'],
+ [6,'Cleanup','skin',600,40,'Quick refresh for dull skin','🌸'],
+ [7,'Fruit Facial','skin',900,60,'Glow-boosting classic facial','🍓'],
+ [8,'Gold / Radiance Facial','skin',1600,75,'Luxury facial for a lit-from-within glow','🥇'],
+ [9,'De-Tan Treatment','skin',800,45,'Removes tan and evens skin tone','☀️'],
+ [10,'Party Makeup','makeup',2500,75,'Long-lasting makeup for events','💄'],
+ [11,'Engagement Makeup','makeup',5500,100,'Camera-ready glam look','💍'],
+ [12,'Bridal Makeup (HD)','makeup',12000,150,'Complete bridal look with hairstyle','👰'],
+ [13,'Saree Draping','makeup',500,30,'Neat draping and pleating','🥻'],
+ [14,'Manicure','nails',500,40,'Shape, cuticle care and polish','💅'],
+ [15,'Pedicure','nails',700,50,'Relaxing foot care and polish','🦶'],
+ [16,'Gel Nail Polish','nails',600,40,'Shiny, chip-free for weeks','🌟'],
+ [17,'Nail Extensions & Art','nails',1800,90,'Extensions with custom nail art','🎀'],
+ [18,'Full Arms Waxing','wax',350,25,'Smooth, clean finish','🌿'],
+ [19,'Full Legs Waxing','wax',450,30,'Gentle waxing with soothing finish','🍃'],
+ [20,'Full Body Waxing','wax',1800,90,'Arms, legs, underarms and more','🌼'],
+ [21,'Eyebrow + Upper Lip Threading','wax',80,15,'Precise shaping','🧵'],
+ [22,'Head Massage (Oil)','spa',400,30,'Relaxing oil massage','🛢️'],
+ [23,'Full Body Massage','spa',2200,60,'Stress-relief therapy','🌺'],
+ [24,'Foot Reflexology','spa',700,30,'Relax tired feet','🦶']
+].map(a=>({id:a[0],name:a[1],cat:a[2],price:a[3],min:a[4],desc:a[5],ic:a[6]}));
+const PK=[
+ {n:'Glow Package',p:2499,m:3200,pop:false,l:['Fruit Facial','Manicure + Pedicure','Eyebrow Threading','Head Massage'],ids:[7,14,15,21,22]},
+ {n:'Bridal Package',p:21999,m:27500,pop:true,l:['HD Bridal Makeup','Pre-bridal Facial','Hair Spa','Manicure + Pedicure','Free Trial Session'],ids:[12,8,2,14,15]},
+ {n:'Monthly Membership',p:3999,m:5500,pop:false,l:['2 Haircuts','2 Cleanups','1 Hair Spa','Priority Booking'],ids:[1,6,2]}
+];
+const TEAM=[
+ {n:'Vihaan',r:'Founder & Senior Stylist',e:'👩‍🎤',c:'#ffd9e6',x:'Hair, makeup, bridal'},
+ {n:'Anjali',r:'Skin & Facial Expert',e:'👩‍⚕️',c:'#ffe9c9',x:'Facials, de-tan, skin care'},
+ {n:'Ritu',r:'Nail Artist',e:'👩‍🎨',c:'#e8d0f5',x:'Nail art, manicure, pedicure'},
+ {n:'Sana',r:'Makeup Artist',e:'👩',c:'#d6f0e6',x:'Party and engagement makeup'}
+];
+const GAL=[['Bridal Look','👰','#ffd9e6'],['Hair Colour','🎨','#e8d0f5'],['Nail Art','💅','#ffe9c9'],['Party Makeup','💄','#ffc7d8'],['Glow Facial','🌸','#d6f0e6'],['Hair Spa','💆‍♀️','#fff0c9'],['Styling','✂️','#dbe7ff'],['Mehndi Ready','🌺','#fde0d0']];
+
+const $=s=>document.querySelector(s);
+const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
+const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let sel=load('vbp_sel',[]),tab='hair',bk={step:0,date:null,time:null,stylist:'Any available',visit:'salon',name:'',phone:'',note:'',coupon:''};
+const wa=t=>`https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(t||'Hello, I would like to know more about Vihaan Beauty Parlour.')}`;
+['waHero','waFoot','waFloat'].forEach(i=>$('#'+i).href=wa());
+$('#phoneTxt').textContent=SHOP.whatsapp.includes('X')?'(add parlour number here)':'+'+SHOP.whatsapp;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),1900)}
+const svc=id=>S.find(x=>x.id===id);
+
+/* services */
+function renderTabs(){$('#tabs').innerHTML=CATS.map(c=>`<button class="tab ${tab===c.id?'on':''}" onclick="setTab('${c.id}')">${c.i} ${c.n}</button>`).join('')}
+function setTab(t){tab=t;renderTabs();renderSvc()}
+function renderSvc(){
+ $('#svc').innerHTML=S.filter(s=>s.cat===tab).map(s=>`<div class="sv ${sel.includes(s.id)?'on':''}"><div class="ic">${s.ic}</div>
+  <div><h3>${s.name}</h3><p>${s.desc} · ${s.min} min</p></div>
+  <div class="pr"><b>${inr(s.price)}</b><button onclick="toggleSvc(${s.id})">${sel.includes(s.id)?'✓ Added':'+ Add'}</button></div></div>`).join('');
+ $('#bc').textContent=sel.length;
+}
+function toggleSvc(id){sel=sel.includes(id)?sel.filter(x=>x!==id):[...sel,id];save('vbp_sel',sel);renderSvc();toast(sel.includes(id)?'Added to your appointment ✓':'Removed')}
+function renderPk(){
+ $('#pk').innerHTML=PK.map((p,i)=>`<div class="pkc ${p.pop?'pop':''}">${p.pop?'<span class="rb">Most Popular</span>':''}<h3>${p.n}</h3>
+  <div class="am">${inr(p.p)}<s>${inr(p.m)}</s></div><ul>${p.l.map(x=>`<li>${x}</li>`).join('')}</ul>
+  <a href="#" class="btn ${p.pop?'p':'o'}" onclick="bookPk(${i});return false">Book this package</a></div>`).join('');
+}
+let pkgSel=null;
+function bookPk(i){pkgSel=i;sel=[...PK[i].ids];save('vbp_sel',sel);renderSvc();openBook()}
+$('#gal').innerHTML=GAL.map(g=>`<div class="gi" style="background:linear-gradient(145deg,${g[2]},#fff)">${g[1]}<span>${g[0]}</span></div>`).join('');
+$('#team-g').innerHTML=TEAM.map(t=>`<div class="tm"><div class="av" style="background:${t.c}">${t.e}</div><h3>${t.n}</h3><b style="font-size:13px;color:var(--rose);font-weight:500">${t.r}</b><p>${t.x}</p><div class="rt">★★★★★</div></div>`).join('');
+
+/* totals */
+function totals(){
+ let sub=0,mins=0;
+ if(pkgSel!==null&&sel.length===PK[pkgSel].ids.length&&PK[pkgSel].ids.every(x=>sel.includes(x))){sub=PK[pkgSel].p;sel.forEach(id=>mins+=svc(id).min)}
+ else{pkgSel=null;sel.forEach(id=>{sub+=svc(id).price;mins+=svc(id).min})}
+ let disc=0;const c=COUPONS[bk.coupon];
+ if(c&&sub>=c.min&&(!c.minItems||sel.length>=c.minItems))disc=c.t==='pct'?sub*c.v/100:c.v;
+ const fee=bk.visit==='home'&&sub?SHOP.homeFee:0;
+ return{sub,disc,fee,total:sub-disc+fee,mins};
+}
+
+/* booking modal */
+function openBook(){$('#nav').classList.remove('on');bk.step=sel.length?1:0;draw()}
+function closeModal(){$('#m').classList.remove('on')}
+function steps(n){return `<div class="steps">${[0,1,2,3].map(i=>`<i class="${i<=n?'d':''}"></i>`).join('')}</div>`}
+function sumHtml(){
+ const t=totals();
+ return `<div class="sum">${sel.map(id=>{const s=svc(id);return `<div class="row"><span>${s.ic} ${s.name}</span><span>${pkgSel!==null?'':inr(s.price)}</span></div>`}).join('')}
+ ${pkgSel!==null?`<div class="row"><span><b>${PK[pkgSel].n}</b></span><span>${inr(t.sub)}</span></div>`:''}
+ ${t.disc?`<div class="row" style="color:var(--ok)"><span>Discount (${bk.coupon})</span><span>−${inr(t.disc)}</span></div>`:''}
+ ${t.fee?`<div class="row"><span>Home service charge</span><span>${inr(t.fee)}</span></div>`:''}
+ <div class="row tot"><span>Total (${t.mins} min)</span><span>${inr(t.total)}</span></div></div>`;
+}
+function dayList(){
+ const a=[],d=new Date();d.setHours(0,0,0,0);
+ for(let i=0;i<SHOP.days;i++){const x=new Date(d);x.setDate(d.getDate()+i);a.push(x)}return a;
+}
+const key=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function times(dateKey){
+ const out=[],now=new Date(),booked=load('vbp_bookings',[]).filter(b=>b.date===dateKey&&b.status==='Confirmed').map(b=>b.time);
+ for(let h=SHOP.open;h<SHOP.close;h++){
+  const dt=new Date(dateKey+'T'+String(h).padStart(2,'0')+':00:00');
+  const l=(h>12?h-12:h)+':00 '+(h>=12?'PM':'AM');
+  /* demo: a few slots look pre-booked so the calendar feels real */
+  const fake=(dateKey.split('-').join('')*1+h*7)%5===0;
+  out.push({l,dis:dt<now||booked.includes(l)||fake});
+ }
+ return out;
+}
+function draw(){
+ const m=$('#m'),c=$('#mc');m.classList.add('on');
+ if(bk.step===0){
+  c.innerHTML=`<button class="x" onclick="closeModal()">✕</button><h2>Book Appointment</h2>${steps(0)}
+  <div class="empty">💆‍♀️<br>You haven't picked any services yet.<br><br><a class="btn p" href="#services" onclick="closeModal()">Browse Services</a></div>`;return;
+ }
+ if(bk.step===1){
+  c.innerHTML=`<button class="x" onclick="closeModal()">✕</button><h2>Your Services</h2><p style="color:var(--muted);font-size:14px">Step 1 of 3 — review your selection</p>${steps(0)}
+  ${sel.map(id=>{const s=svc(id);return `<div class="ci"><div class="t">${s.ic}</div><div><h4>${s.name}</h4><small>${s.min} min</small></div><div style="text-align:right"><b>${pkgSel!==null?'':inr(s.price)}</b><br><button class="rm" onclick="rmSvc(${id})">Remove</button></div></div>`}).join('')}
+  ${sumHtml()}
+  <div class="mf"><button class="btn o" onclick="closeModal()">Add more</button><button class="btn p" onclick="bk.step=2;draw()">Choose date &amp; time</button></div>`;return;
+ }
+ if(bk.step===2){
+  const ds=dayList(),dk=bk.date||key(ds[0]);bk.date=dk;
+  c.innerHTML=`<button class="x" onclick="closeModal()">✕</button><h2>Date &amp; Time</h2><p style="color:var(--muted);font-size:14px">Step 2 of 3 — pick a slot that suits you</p>${steps(1)}
+  <div class="days">${ds.map(d=>{const k=key(d);return `<button class="day ${k===dk?'on':''}" onclick="pickDate('${k}')">${d.toLocaleDateString('en-IN',{weekday:'short'})}<b>${d.getDate()}</b>${d.toLocaleDateString('en-IN',{month:'short'})}</button>`}).join('')}</div>
+  <div class="lbl">Available time slots</div>
+  <div class="slots">${times(dk).map(t=>`<button class="slot ${bk.time===t.l?'on':''}" ${t.dis?'disabled':''} onclick="pickTime('${t.l}')">${t.l}</button>`).join('')}</div>
+  <div class="lbl">Preferred stylist</div>
+  <div class="chips">${['Any available',...TEAM.map(t=>t.n)].map(n=>`<button class="chip ${bk.stylist===n?'on':''}" onclick="bk.stylist='${n}';draw()">${n}</button>`).join('')}</div>
+  <div class="lbl">Where?</div>
+  <div class="chips"><button class="chip ${bk.visit==='salon'?'on':''}" onclick="bk.visit='salon';draw()">🏠 At the parlour</button><button class="chip ${bk.visit==='home'?'on':''}" onclick="bk.visit='home';draw()">🚗 Home service (+${inr(SHOP.homeFee)})</button></div>
+  <div class="err" id="e2">Please choose a time slot</div>
+  <div class="mf"><button class="btn o" onclick="bk.step=1;draw()">Back</button><button class="btn p" onclick="if(!bk.time){$('#e2').style.display='block';return}bk.step=3;draw()">Continue</button></div>`;return;
+ }
+ if(bk.step===3){
+  c.innerHTML=`<button class="x" onclick="closeModal()">✕</button><h2>Your Details</h2><p style="color:var(--muted);font-size:14px">Step 3 of 3 — almost done</p>${steps(2)}
+  <form id="bf"><input id="bn" placeholder="Full name" value="${bk.name}" required><input id="bp" type="tel" pattern="[0-9]{10}" placeholder="Mobile number (10 digits)" value="${bk.phone}" required>
+  ${bk.visit==='home'?'<input id="ba" placeholder="Home address for service" required>':''}
+  <textarea id="bo" rows="2" placeholder="Notes (allergies, preferences — optional)">${bk.note}</textarea>
+  <div class="cpn"><input id="bc2" placeholder="Coupon code" value="${bk.coupon}"><button type="button" onclick="applyC()">Apply</button></div>
+  <div class="sum"><div class="row"><span>📅 ${new Date(bk.date+'T00:00').toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long'})}</span><span>${bk.time}</span></div><div class="row"><span>Stylist</span><span>${bk.stylist}</span></div><div class="row"><span>Location</span><span>${bk.visit==='home'?'Home service':'At the parlour'}</span></div></div>
+  ${sumHtml()}
+  <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px">Pay at the parlour after your service — no advance required.</p>
+  <div class="mf"><button type="button" class="btn o" onclick="keepForm();bk.step=2;draw()">Back</button><button class="btn p">Confirm Booking</button></div></form>`;
+  $('#bf').onsubmit=e=>{e.preventDefault();confirmBk()};return;
+ }
+ if(bk.step===4){
+  const b=bk.done,list=b.items.map(i=>`• ${i}`).join('<br>');
+  c.innerHTML=`<button class="x" onclick="closeModal()">✕</button><div class="ok"><div class="tick">🎉</div><h2>Booking Confirmed!</h2>
+  <p style="color:var(--muted)">Your booking ID is <b style="color:var(--rose)">${b.id}</b></p>
+  <div class="bk"><b>${b.dateLabel} · ${b.time}</b><br>${b.visit==='home'?'🚗 Home service':'🏠 At the parlour'} · Stylist: ${b.stylist}<br><br>${list}<br><br><b>Total: ${inr(b.total)}</b></div>
+  <div class="mf"><a class="btn wa" target="_blank" href="${wa(b.msg)}">Send on WhatsApp</a><button class="btn o" onclick="closeModal()">Done</button></div>
+  <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Save your ID — use “My Booking” in the menu to view or cancel.</p></div>`;
+ }
+}
+function keepForm(){bk.name=$('#bn').value;bk.phone=$('#bp').value;bk.note=$('#bo').value;bk.coupon=$('#bc2').value.trim().toUpperCase()}
+function rmSvc(id){sel=sel.filter(x=>x!==id);pkgSel=null;save('vbp_sel',sel);renderSvc();if(!sel.length){bk.step=0}draw()}
+function pickDate(k){bk.date=k;bk.time=null;draw()}
+function pickTime(t){bk.time=t;draw()}
+function applyC(){
+ keepForm();const c=bk.coupon,t=totals();
+ if(!c){draw();return}
+ const cp=COUPONS[c];
+ if(!cp){bk.coupon='';draw();return toast('Invalid coupon')}
+ if(cp.min&&t.sub<cp.min){bk.coupon='';draw();return toast('Minimum '+inr(cp.min)+' required')}
+ if(cp.minItems&&sel.length<cp.minItems){bk.coupon='';draw();return toast('Add '+cp.minItems+'+ services to use this')}
+ draw();toast('Coupon applied 🎉');
+}
+function confirmBk(){
+ keepForm();const t=totals();
+ const id='VBP'+Date.now().toString().slice(-6);
+ const dateLabel=new Date(bk.date+'T00:00').toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long'});
+ const addr=bk.visit==='home'?($('#ba')?$('#ba').value:''):'';
+ const items=sel.map(i=>svc(i).name+(pkgSel!==null?'':' — '+inr(svc(i).price)));
+ if(pkgSel!==null)items.unshift(PK[pkgSel].n+' package');
+ const b={id,date:bk.date,time:bk.time,dateLabel,stylist:bk.stylist,visit:bk.visit,name:bk.name,phone:bk.phone,addr,note:bk.note,items,total:t.total,status:'Confirmed'};
+ b.msg=`New Booking ${id}\nName: ${b.name}\nPhone: ${b.phone}\nDate: ${dateLabel}, ${b.time}\nStylist: ${b.stylist}\nLocation: ${b.visit==='home'?'Home service — '+addr:'At the parlour'}\nServices:\n${items.map(i=>'• '+i).join('\n')}\nTotal: ${inr(b.total)}${b.note?'\nNotes: '+b.note:''}`;
+ const all=load('vbp_bookings',[]);all.push(b);save('vbp_bookings',all);
+ sel=[];pkgSel=null;save('vbp_sel',sel);renderSvc();
+ bk={step:4,date:null,time:null,stylist:'Any available',visit:'salon',name:'',phone:'',note:'',coupon:'',done:b};draw();
+}
+
+/* manage booking */
+function openManage(){
+ $('#nav').classList.remove('on');
+ $('#mc').innerHTML=`<button class="x" onclick="closeModal()">✕</button><h2>My Booking</h2><p style="color:var(--muted);font-size:14px;margin-bottom:12px">Enter your booking ID to view or cancel</p>
+ <form id="mf" style="display:flex;gap:8px"><input id="mid" placeholder="e.g. VBP123456" style="margin:0" required><button class="btn p">Find</button></form><div id="mres"></div>`;
+ $('#m').classList.add('on');
+ $('#mf').onsubmit=e=>{e.preventDefault();showB($('#mid').value.trim().toUpperCase())};
+}
+function showB(id){
+ const b=load('vbp_bookings',[]).find(x=>x.id===id);
+ if(!b){$('#mres').innerHTML='<p style="color:#c0392b;margin-top:14px">Booking not found. Please check your ID.</p>';return}
+ $('#mres').innerHTML=`<div class="bk"><b>${b.id}</b> · <span style="color:${b.status==='Confirmed'?'var(--ok)':'#c0392b'};font-weight:500">${b.status}</span><br><br><b>${b.dateLabel} · ${b.time}</b><br>${b.visit==='home'?'🚗 Home service':'🏠 At the parlour'} · Stylist: ${b.stylist}<br><br>${b.items.map(i=>'• '+i).join('<br>')}<br><br><b>Total: ${inr(b.total)}</b></div>
+ ${b.status==='Confirmed'?`<div class="mf"><button class="btn o" onclick="cancelB('${b.id}')">Cancel Booking</button><a class="btn wa" target="_blank" href="${wa('Hello, I need to reschedule booking '+b.id)}">Reschedule on WhatsApp</a></div>`:''}`;
+}
+function cancelB(id){
+ if(!confirm('Cancel this booking?'))return;
+ const all=load('vbp_bookings',[]);const b=all.find(x=>x.id===id);if(b)b.status='Cancelled';save('vbp_bookings',all);showB(id);toast('Booking cancelled');
+}
+
+/* misc */
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>$('#nav').classList.remove('on')));
+addEventListener('scroll',()=>{$('#up').style.display=scrollY>500?'grid':'none'});
+$('#enq').onsubmit=e=>{e.preventDefault();window.open(wa(`Enquiry\nName: ${$('#en').value}\nPhone: ${$('#ep').value}\n${$('#em').value}`),'_blank');e.target.reset();toast('Enquiry sent ✓')};
+$('#nlf').onsubmit=e=>{e.preventDefault();e.target.reset();toast('Subscribed! Use code GLOW15 🌸')};
+renderTabs();renderSvc();renderPk();
+</script>
+</body>
+</html>
